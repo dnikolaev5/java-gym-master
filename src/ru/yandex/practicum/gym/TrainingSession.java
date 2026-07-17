@@ -1,5 +1,7 @@
 package ru.yandex.practicum.gym;
 
+import java.util.List;
+
 public class TrainingSession {
 
     //группа
