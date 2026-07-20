@@ -87,7 +87,7 @@ public class TimetableTest {
 
         Assertions.assertEquals(2, coachReport.size());
         Assertions.assertEquals("Тренер: Иванов Иван Иванович, тренировок: 3", coachReport.get(0).toString());
-        Assertions.assertEquals("Тренер: Petrov Petr Petrovich, тренировок: 1", coachReport.get(1).toString());
+        Assertions.assertEquals("Тренер: Петров Петр Петрович, тренировок: 1", coachReport.get(1).toString());
     }
 
     @Test

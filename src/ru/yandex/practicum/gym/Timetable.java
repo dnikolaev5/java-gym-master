@@ -15,20 +15,21 @@ public class Timetable {
 
     public void addNewTrainingSession(TrainingSession trainingSession) {
 
+        sessions.add(trainingSession);
+
         DayOfWeek day = trainingSession.getDayOfWeek();
         TimeOfDay time = trainingSession.getTimeOfDay();
 
         if (!timetable.containsKey(day)) {
             timetable.put(day, new TreeMap<>());
         }
-
         TreeMap<TimeOfDay, List<TrainingSession>> dayMap = timetable.get(day);
+
         if (!dayMap.containsKey(time)) {
             dayMap.put(time, new ArrayList<>());
         }
-
-        List<TrainingSession> sessions = dayMap.get(time);
-        sessions.add(trainingSession);
+        List<TrainingSession> sessionsList = dayMap.get(time);
+        sessionsList.add(trainingSession);
     }
 
 
