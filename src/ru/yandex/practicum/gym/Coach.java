@@ -26,6 +26,11 @@ public class Coach {
     }
 
     @Override
+    public String toString() {
+        return surname + " " + name + " " + middleName;
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(surname, name, middleName);
     }
