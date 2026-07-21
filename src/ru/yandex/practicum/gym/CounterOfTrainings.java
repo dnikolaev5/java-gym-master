@@ -2,15 +2,15 @@ package ru.yandex.practicum.gym;
 
 public class CounterOfTrainings implements Comparable<CounterOfTrainings> {
 
-    private final String coachName;
+    private final Coach coachName;
     private final int count;
 
-    public CounterOfTrainings(String coachName, int count) {
+    public CounterOfTrainings(Coach coachName, int count) {
         this.coachName = coachName;
         this.count = count;
     }
 
-    public String getCoachName() {
+    public Coach getCoachName() {
         return coachName;
     }
 

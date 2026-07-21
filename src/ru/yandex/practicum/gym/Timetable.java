@@ -4,8 +4,6 @@ import java.util.*;
 
 public class Timetable {
 
-    private List<String> training = new ArrayList<>();
-    private static final Scanner scanner = new Scanner(System.in);
     private final List<TrainingSession> sessions = new ArrayList<>();
     private HashMap<DayOfWeek, TreeMap<TimeOfDay, List<TrainingSession>>> timetable;
 
@@ -83,9 +81,7 @@ public class Timetable {
         List<CounterOfTrainings> counters = new ArrayList<>();
         for (Map.Entry<Coach, Integer> entry : coachCount.entrySet()) {
             Coach coach = entry.getKey();
-            String fullName = coach.getSurname() + " " + coach.getName() + " " + coach.getMiddleName();
-
-            counters.add(new CounterOfTrainings(fullName, entry.getValue()));
+            counters.add(new CounterOfTrainings(coach, entry.getValue()));
         }
 
         Collections.sort(counters);
